@@ -9,15 +9,20 @@ def handan(num):
     return 1
 
 cun = 10000
-
-y = []
+file = open("sosu.txt",'w')
+all_n = 0
+all_p = 0
+per = 0
+#y = []
 for j in range(2,cun):
     if handan(j) == 1:
-        y.append(j)
+        all_n += 1
+        all_p += 1
+        per = all_p / all_n
+        file.write(str(per) + '\n')
+        
         print(str(j) + ':' 'True')
     else:
+        all_n += 1
+        file.write(str(per) + '\n')
         print(str(j) + ':' + 'False')
-
-file = open('sosu.txt','w')
-file.writelines(str(y))
-file.close()
