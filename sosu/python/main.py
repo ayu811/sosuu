@@ -8,7 +8,7 @@ def handan(num):
             return 0
     return 1
 
-cun = 10000
+cun = 1000
 file = open("sosu.txt",'w')
 all_n = 0
 all_p = 0
